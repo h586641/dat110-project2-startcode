@@ -8,7 +8,7 @@ public class TransportMessage {
 
 	public TransportMessage(byte[] payload) {
 		// TODO: check for length within boundary
-		if (payload == null || (payload.length + 1 > MessageConfig.MESSAGINGPORT)) {
+		if (payload == null || (payload.length + 1 > MessageConfig.SEGMENTSIZE)) {
 			throw new RuntimeException("Message: invalid payload");
 		}
 		
